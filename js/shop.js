@@ -114,6 +114,16 @@ function buildDOM() {
 // window onload function to build the DOM
 window.onload = buildDOM();
 
+//window onload function to load saved cart items
+window.onload = function() {
+    if("cart" in localStorage) {
+      var loadCartItems = JSON.parse(localStorage.getItem("cart"));
+      cart.items = loadCartItems;
+      buildCart();
+      productTotal();
+    }// end of if
+};
+
 // function list
 function list() {
     var displayItems = document.getElementsByClassName("product-div");
@@ -363,6 +373,7 @@ function decreaseQuantity(index) {
       }// end of if
     }// end of for
     productTotal();
+    saveCart();
 }// end of function
 
 //increase quantity
@@ -377,7 +388,9 @@ function increaseQuantity(index) {
       }// end of if
     }// end of for
     productTotal();
+    saveCart();
 }// end of function
+
 
 // function removeItem
 function removeItem(index) {
@@ -389,10 +402,11 @@ function removeItem(index) {
     }// end of for
     if(cart.items.length == 0) {
       document.getElementById("topCartDisplay").value = 0;
-      localStorage.clear();
+         localStorage.clear();
     }//end of if
     productTotal();
     buildCart();
+    saveCart();
 }// end of function
 
 
@@ -523,5 +537,12 @@ function grandTotal() {
 // function paypalPage
 function paypalPage() {
     window.location = "http://www.paypal.com";
+}// end of function
+
+// local storage
+function saveCart() {
+    var savedCartItems = cart.items;
+    localStorage.setItem("cart", JSON.stringify(savedCartItems));
+    //alert(JSON.stringify(savedCartItems));
 }// end of function
 
