@@ -110,3 +110,7 @@ function buildDOM() {
       document.getElementById("product-container").appendChild(productDiv);
     } // end of for
 } // end of function
+
+// window onload function to build the DOM
+window.onload = buildDOM();
+
