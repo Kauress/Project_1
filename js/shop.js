@@ -519,3 +519,9 @@ function grandTotal() {
       checkoutRowElements[0].parentNode.removeChild(checkoutRowElements[0]);
     }// end of while
 }// end of function
+
+// function paypalPage
+function paypalPage() {
+    window.location = "http://www.paypal.com";
+}// end of function
+
