@@ -1,0 +1,176 @@
+    /* custom font */
+
+   @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+    /* ------------------------------
+         BODY STYLES
+    ---------------------------- */
+
+    body {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        font-size: 15px;
+    }
+    /* align items in row */
+
+    .row {
+        text-align: center;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h1,
+    h3 {
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 15px;
+    }
+    .container {
+        margin-top: 30px;
+    }
+    .btn {
+        padding: 10px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /*--------------------------------------------
+        CONTAINER FOR  TOPCARTDISPLAY , WISHLIST AND  PAYPAL/CC/BTC
+    ------------------------------------------  */
+
+    .fa.fa-shopping-cart {
+        color: #ff9900;
+    }
+
+    /* wishlist button */
+    .fa.fa-heart-o{
+      color:red;
+    }/
+
+    /* wishlist modal pop up style */
+
+
+    .modal {
+        margin-top: 30px;
+     }
+
+    .modal-content {
+        width: 50%;
+        padding: 30px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* cart and payment section */
+
+    .fa.fa-paypal {
+        color: #009cde;
+    }
+    .fa.fa-credit-card {
+        color: #ff9900;
+    }
+
+
+
+    /* -----------------------------
+        CONTAINER FOR LIST/GRID VIEW AND SORT
+    --------------------------------  */
+
+    select {
+        height: 40px;
+        width: auto;
+        background: none;
+        border: 1px solid #EEEEEE;
+    }
+    /* ------------------
+        CONTAINER FOR FILTER CHOICES
+    ---------------------*/
+
+    input[type="checkbox"] {
+        display: none;
+    }
+    .custom-check {
+        display: inline-block;
+        width: 45px;
+        height: 40px;
+        background: white;
+        border: 1px solid black;
+        font-family: 'Glyphicons Halflings';
+        font-size: 40px;
+        line-height: 1;
+    }
+    .custom-check::before {
+        content: "\e013";
+        color: #424242;
+        display: none;
+    }
+    input[type=checkbox]:checked+.custom-check::before {
+        display: block;
+        color: white;
+        background-color: #5cb85c;
+    }
+    /*---------------------
+        CONTAINER FOR PRODUCT LISTINGS
+    ------------------------- */
+
+    .product-div {
+        border: 2px dotted black;
+        text-align: center;
+        padding: 20px;
+    }
+    .product-input {
+        border: none;
+        width: 100px;
+    }
+    .heart {
+        color: red;
+        background-color: #ffdee0;
+    }
+    /* -----------------------------
+        CONTAINER FOR SHOPPING CART
+    --------------------------------  */
+    /* Shopping Cart */
+
+    #productsTable {
+        width: 100%;
+        border: 2px dotted black;
+        border-collapse: separate;
+        border-spacing: 10px;
+        font-size: 15px;
+    }
+    #productsTable > tr {
+        font-size: 18px;
+    }
+    .quantityButton {
+        border: none;
+        background: #5cb85c;
+        border-radius: 4px;
+        margin: 4px;
+        width: 35px;
+        height: 35px;
+        color: #FFFFFF;
+    }
+    #grandTotal {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    /*----------------------------
+        SHIPPING
+      --------------------------- */
+
+    #shippingText {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .checkoutRow {
+        text-transform: uppercase;
+    }
+    /*----------------------------
+       FOOTER CONTAINER
+    ---------------------  */
+
+    .footer-container {
+        width: 100%;
+        height: auto;
+        margin-top: 200px;
+    }

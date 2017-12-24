@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vanilla JavaScript Shopping Cart</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- MAIN HEADING  -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1> Vanilla JavaScript Shopping Cart</h1>
+                <h3> Kauress for Envato Tuts+</h3>
+            </div>
+            <!-- end of col-md-12 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container -->
+
+    <!-- CONTAINER FOR  CART, WISHLIST AND  PAYPAL/CC/BTC  -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" id="topCartDisplay" value=0>
+                <span class="fa fa-shopping-cart fa-3x"> </span>
+                </input>
+            </div>
+            <!-- end of col-md-4 -->
+            <!-- center block -->
+
+            <div class="col-md-4 heartButtonDiv">
+                <button class="btn btn-default" id="wishlistBtn">
+                    <span class="fa fa-heart-o fa-3x"> </span> Wishlist
+                </button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close"> X </span>
+                        <h3 id="wishlistText">  </h3>
+                        <table class="table table-striped" id="wishlistTable">
+                            <thead>
+                                <tr>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <!-- end of modal content -->
+                </div>
+                <!-- end of wishlist modal -->
+            </div>
+            <!-- end of col-md-4 -->
+
+            <div class="col-md-4">
+                <i class="fa fa-credit-card fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-paypal fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-btc fa-3x" aria-hidden="true"></i></h4>
+            </div>
+            <!-- end of col-md-4 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container -->
+
+    <!-- IMAGE CONTAINER -->
+
+    <div class="container">
+        <img src="images/header.jpg" class="center-block">
+    </div>
+
+    <!-- CONTAINER FOR LIST/GRID VIEW AND SORT -->
+
+    <!-- List or Grid View -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-default" id='grid-view' onclick="grid()">
+                    <i class="fa fa-table fa-3x" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-default" id="list-view" onclick="list()">
+                    <i class="fa fa-list fa-3x" aria-hidden="true"></i>
+                </button>
+                <select id="sortByChoice">
+                    <option value="LowToHigh">Low to High</option>
+                    <option value="HighToLow">High to Low</option>
+                    <option value="A-Z"> A-Z</option>
+                </select>
+            </div>
+            <!-- end of col-md-12-->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container -->
+    </div>
+
+    <!-- CONTAINER FOR FILTER CHOICES  -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <label>
+              <input class="filterCategory" type="checkbox" value="Code" onchange="updateFilter()">
+              <span class="custom-check"></span> Code
+                </label>
+                <label>
+                    <input class="filterCategory" type="checkbox" value="Design" onchange="updateFilter()">
+                    <span class="custom-check"></span> Design
+                    <label>
+                        <input class="filterCategory" type="checkbox" value="Greetings" onchange="updateFilter()">
+                        <span class="custom-check"></span> Greetings
+                    </label>
+                    <label>
+                        <input class="filterCategory" type="checkbox" value="Speciality" onchange="updateFilter()">
+                        <span class="custom-check"></span> Speciality
+                    </label>
+            </div>
+            <!-- end of col-12 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container-->
+
+    <!--  CONTAINER FOR PRODUCT LISTINGS   -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Featured Products</h3>
+            </div>
+            <!-- end of  -->
+        </div>
+        <!--  end of row -->
+    </div>
+    <!-- end of container -->
+
+    <div class="container" id="product-container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+            <!-- end of col-md-12 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container -->
+
+    <!-- CONTAINER FOR SHOPPING CART -->
+
+    <div class="container">
+        <h3> Your Cart </h3>
+        <div class="row">
+            <table id="productsTable">
+                <thead>
+                </thead>
+            </table>
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container -->
+
+    <div class="footer-container">
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <i class="fa  fa-twitter fa-3x"> </i>
+                <i class="fa  fa-instagram fa-3x"> </i>
+                <i class="fa  fa-facebook fa-3x"> </i>
+            </div>
+            <!-- end of col md 4 -->
+
+            <div class="col-md-4">
+                <h3>&copy;Vanilla JavaScript Shopping Cart<h3>
+        <p>Working with the DOM using JS</p>
+         <p>Level up! </p>
+   </div> <!-- end of cold md 4 -->
+
+   <div class="col-md-4">
+        <img src = "images/logo.jpg">
+        <h3> Our Blog </h3>
+
+            </div>
+            <!-- end of col md 4 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of footer -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/handlebars.js"></script>
+
+    <!-- Custom shop JS -->
+    <script src="js/shop.js"></script>
+ </body>
+
+</html>

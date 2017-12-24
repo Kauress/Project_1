@@ -1,0 +1,167 @@
+/* custom font */
+ @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* font awesome */
+
+@import "font-awesome";
+
+/* glyphicons */
+
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css');
+
+/* -------------------------------------------------------------------
+              BODY STYLE
+------------------------------------------------------------------- */
+
+body {
+  font-family: 'Raleway', sans-serif;
+  
+}
+
+/* align items in row */
+.row {
+  text-align:center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1, h3 {
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container {
+  margin-top: 10px;
+}
+
+.btn {
+  margin: 30px;
+
+}
+
+
+--------------------------------------------
+               TOP SECTION
+------------------------------------------  */
+#topCartDisplay{
+  width: 100px;
+  text-align: center;
+}
+
+.fa.fa-shopping-cart{
+  color: #ff9900;
+}
+
+.fa.fa-heart-o{
+  color:red;
+}
+
+/* cart and payment section */
+
+.fa.fa-paypal{color:#009cde;}
+.fa.fa-credit-card{color:#ff9900;}
+
+/* modal pop up style */
+.modal-content{
+  width:50%;
+  padding:30px;
+  margin: 0 auto;
+  text-align:center;
+}
+
+/* -----------------------------
+         LIST OR GRID  & SELECT
+--------------------------------  */
+
+
+select {
+  height: 40px;
+  width: auto;
+ background: none;
+  border: 1px solid #EEEEEE;
+}
+
+
+/*---------------------
+PRODUCT LISTING 
+---------- */
+#product-row {
+  border: 2px dashed green;
+  text-align: center;
+  padding: 30px;
+}
+
+.product-input{
+  border: none;
+  width: 100px;
+}
+
+/* -----------------------------
+       Shopping Cart
+--------------------------------  */
+
+/* Shopping Cart */
+
+#productsTable{
+ width: 90%;
+border-collapse:separate; 
+border-spacing:5px;
+font-size: 18px;
+  border: 2px dashed green;
+}
+
+
+.quantityButton{
+  border:none;
+  background: #5cb85c;
+  border-radius: 4px;
+  margin: 4px;
+  height: 35px;
+  width: 35px;
+  color: #FFFFFF;
+
+}
+
+#selectBox {
+ width: 70%;
+ margin-left: -100px;
+}
+
+.btn.btn-info {
+  height: 50px;
+  width: 100px;
+  text-align: center;
+}
+
+/* ------------------
+Sort Input boxes
+---------------------*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.custom-check {
+        display: inline-block;
+        width: 45px; height: 40px;
+        background: white;
+        border: 1px solid black;
+        font-family: 'Glyphicons Halflings';
+        font-size: 40px;
+        line-height: 1;
+
+    }
+
+.custom-check::before {
+  content: "\e013";
+  color: #424242;
+  display: none;
+}
+
+input[type=checkbox]:checked+.custom-check::before {
+  display: block;
+  color: white;
+  background-color:#5cb85c;
+}
