@@ -439,3 +439,8 @@ function productTotal() {
     cart.total = itemTotal.toFixed(2);
     buildCart();
 }// end of function
+
+// function topCartDisplay
+function topCartDisplay() {
+    document.getElementById("topCartDisplay").value = cart.numberItems;
+}// end of function
